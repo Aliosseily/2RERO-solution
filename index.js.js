@@ -16,14 +16,14 @@ const input = `
 roadsAndLibraries(input);
 
 function roadsAndLibraries(input) {
-  var transformInput = input.trim().split("\n");
+  let transformInput = input.trim().split("\n");
   const numberOfQueries = transformInput[0];
   // remove first element from transformInput array (numberOfQueries )
-  var transformInput = transformInput.splice(1, transformInput.length);
+  transformInput = transformInput.splice(1, transformInput.length);
 
   // get the index of of each query
-  var queryIndex = [];
-  var filtered = transformInput.filter((e, i) => {
+  let queryIndex = [];
+  transformInput.filter((e, i) => {
     if (e.length === 7) {
       queryIndex.push(i);
     }
